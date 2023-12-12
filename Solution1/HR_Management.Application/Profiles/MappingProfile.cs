@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HR_Management.Application.DTOs;
+using HR_Management.Application.DTOs.LeaveRequest;
 using HR_Management.Domain;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace HR_Management.Application.Profiles
         public MappingProfile()
         {
             CreateMap<LeaveAllocation,LeaveAllocationDTO>().ReverseMap();
+            CreateMap<LeaveRequest,LeaveRequestListDTO>().ReverseMap();
             CreateMap<LeaveRequest,LeaveRequestDTO>().ReverseMap();
             CreateMap<LeaveType,LeaveTypeDTO>().ReverseMap();
         }
