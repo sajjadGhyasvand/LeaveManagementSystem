@@ -17,7 +17,7 @@ namespace HR_Management.Application.Profiles
             CreateMap<LeaveAllocation,LeaveAllocationDTO>().ReverseMap();
             CreateMap<LeaveRequest,LeaveRequestListDTO>().ReverseMap();
             CreateMap<LeaveRequest,LeaveRequestDTO>().ReverseMap();
-            CreateMap<LeaveType,LeaveTypeDTO>().ReverseMap();
+            CreateMap<LeaveType,LeaveAllocationDTO>().ReverseMap();
         }
     }
 }

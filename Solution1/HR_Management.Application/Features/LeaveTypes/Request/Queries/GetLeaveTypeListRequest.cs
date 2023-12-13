@@ -2,7 +2,7 @@
 using MediatR;
 namespace HR_Management.Application.Features.LeaveTypes.Request.Queries
 {
-    public class GetLeaveTypeListRequest : IRequest<List<LeaveTypeDTO>>
+    public class GetLeaveTypeListRequest : IRequest<List<LeaveAllocationDTO>>
     {
     }
 }

@@ -9,5 +9,7 @@ namespace HR_Management.Application.Persistence.Contracts
 {
     public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {
+        Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetail();
+        Task<LeaveAllocation> GetLeaveAllocationWithDetail(int id);
     }
 }
