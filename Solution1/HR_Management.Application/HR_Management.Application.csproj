@@ -20,8 +20,6 @@
     <Folder Include="Features\LeaveAllocations\Request\Commands\" />
     <Folder Include="Features\LeaveRequests\Handlers\Commands\" />
     <Folder Include="Features\LeaveRequests\Request\Commands\" />
-    <Folder Include="Features\LeaveTypes\Handlers\Commands\" />
-    <Folder Include="Features\LeaveTypes\Request\Commands\" />
     <Folder Include="Features\NewFolder\Handlers\Commands\" />
     <Folder Include="Features\NewFolder\Handlers\Queries\" />
     <Folder Include="Features\NewFolder\Request\Commands\" />
