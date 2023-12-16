@@ -12,19 +12,19 @@ using System.Threading.Tasks;
 
 namespace HR_Management.Application.Features.LeaveAllocations.Handlers.Queries
 {
-    public class GetLeaveAllocationListRequestHandler : IRequestHandler<GetLeaveAllocationListRequest, List<LeaveAllocationDTO>>
+    public class GetLeavRequestListRequestHandler : IRequestHandler<GetLeaveRequestsListRequest, List<LeaveAllocationDTO>>
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
 
-        public GetLeaveAllocationListRequestHandler(ILeaveTypeRepository leaveTypeRepository,IMapper mapper)
+        public GetLeavRequestListRequestHandler(ILeaveTypeRepository leaveTypeRepository,IMapper mapper)
         {
            _leaveTypeRepository = leaveTypeRepository;
             _mapper = mapper;
         }
 
 
-        public async Task<List<LeaveAllocationDTO>> Handle(GetLeaveAllocationListRequest request, CancellationToken cancellationToken)
+        public async Task<List<LeaveAllocationDTO>> Handle(GetLeaveRequestsListRequest request, CancellationToken cancellationToken)
         {
             var leaveTypeList = await _leaveTypeRepository.GetAll();
             return _mapper.Map<List<LeaveAllocationDTO>>(leaveTypeList); 
