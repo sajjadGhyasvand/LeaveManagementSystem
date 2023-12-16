@@ -1,4 +1,5 @@
 ﻿using HR_Management.Application.DTOs.Common;
+using HR_Management.Application.DTOs.LeaveType;
 using System;
 using System.Collections.Generic;
 using System.Linq;

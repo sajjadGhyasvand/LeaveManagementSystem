@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HR_Management.Application.DTOs
+namespace HR_Management.Application.DTOs.LeaveAllocation
 {
-    public class LeaveAllocationDTO :BaseDTO
+    public class LeaveAllocationDTO : BaseDTO
     {
         public int NumberOfDays { get; set; }
         public LeaveAllocationDTO LeaveType { get; set; }
