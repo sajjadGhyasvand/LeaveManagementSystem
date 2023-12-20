@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HR_Management.Application.DTOs.LeaveRequest
 {
-    public class ChangeLeaveRequestApprovealDTO : BaseDTO
+    public class ChangeLeaveRequestApprovalDTO : BaseDTO
     {
         public bool? Approved { get; set; }
     }
