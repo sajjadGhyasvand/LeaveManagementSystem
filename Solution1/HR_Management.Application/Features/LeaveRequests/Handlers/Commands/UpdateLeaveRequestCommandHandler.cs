@@ -21,11 +21,12 @@ namespace HR_Management.Application.Features.LeaveRequests.Handlers.Commands
             _leaveRequestRepository = leaveRequestRepository;
             _mapper = mapper;
         }
-
-
-        public Task<Unit> Handle(UpdateLeaveRequestCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateLeaveRequestCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var leaveRequest =  await _leaveRequestRepository.Get(request.LeaveRequestDTO.Id);
+            _mapper.Map(request.LeaveRequestDTO, leaveRequest);
+            await _leaveRequestRepository.Update(leaveRequest);
+            return Unit.Value;
         }
     }
 }

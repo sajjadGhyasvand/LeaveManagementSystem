@@ -19,9 +19,12 @@ namespace HR_Management.Application.Features.LeaveTypes.Handlers.Commands
             _mapper = mapper;
             _leaveTypeRepository = leaveTypeRepository;
         }
-        public Task<Unit> Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var leaveType = await _leaveTypeRepository.Get(request.LeaveTypeDTO.Id);
+            _mapper.Map(request.LeaveTypeDTO, leaveType);
+            await _leaveTypeRepository.Update(leaveType);
+            return Unit.Value;
         }
     }
 }
