@@ -10,7 +10,7 @@ namespace HR_Management.Application.DTOs.LeaveRequest
 {
     public class LeaveRequestListDTO : BaseDTO
     {
-        public LeaveAllocationDTO LeaveType { get; set; }
+        public LeaveTypeDTO LeaveType { get; set; }
         public DateTime DateRequested { get; set; }
         public bool Approved { get; set; }
 

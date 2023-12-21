@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
     <PackageReference Include="MediatR" Version="12.2.0" />
   </ItemGroup>
 
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DTOs\LeaveAllocation\Validators\" />
     <Folder Include="Features\NewFolder\Handlers\Commands\" />
     <Folder Include="Features\NewFolder\Handlers\Queries\" />
     <Folder Include="Features\NewFolder\Request\Commands\" />

@@ -9,12 +9,12 @@ using MediatR;
 
 namespace HR_Management.Application.Features.LeaveAllocations.Handlers.Queries
 {
-    public class GetLeavRequestDetailRequestHandler : IRequestHandler<GetLeaveAllocationDetailRequest, LeaveAllocationDTO>
+    public class GetLeaveAllocationDetailRequestHandler : IRequestHandler<GetLeaveAllocationDetailRequest, LeaveAllocationDTO>
     {
         private readonly ILeaveAllocationRepository _leaveAllocationRepository;
         private readonly IMapper _mapper;
 
-        public GetLeavRequestDetailRequestHandler(ILeaveAllocationRepository leaveAllocationRepository,IMapper mapper)
+        public GetLeaveAllocationDetailRequestHandler(ILeaveAllocationRepository leaveAllocationRepository,IMapper mapper)
         {
             _leaveAllocationRepository = leaveAllocationRepository;
             _mapper = mapper;

@@ -3,13 +3,4 @@ C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.
 C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.AssemblyInfoInputs.cache
 C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.AssemblyInfo.cs
 C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.csproj.CoreCompileInputs.cache
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\bin\Debug\net6.0\HR_Management.Application.deps.json
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\bin\Debug\net6.0\HR_Management.Application.dll
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\bin\Debug\net6.0\HR_Management.Application.pdb
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\bin\Debug\net6.0\HR_Management.Domain.dll
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\bin\Debug\net6.0\HR_Management.Domain.pdb
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.csproj.CopyComplete
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.dll
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\refint\HR_Management.Application.dll
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.pdb
-C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\ref\HR_Management.Application.dll
+C:\Users\S.Ghiasvand\source\repos\LeaveManagementSystem\Solution1\HR_Management.Application\obj\Debug\net6.0\HR_Management.Application.sourcelink.json
