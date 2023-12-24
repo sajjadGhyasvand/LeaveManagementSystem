@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\LeaveAllocation\Validators\" />
     <Folder Include="Features\NewFolder\Handlers\Commands\" />
     <Folder Include="Features\NewFolder\Handlers\Queries\" />
     <Folder Include="Features\NewFolder\Request\Commands\" />

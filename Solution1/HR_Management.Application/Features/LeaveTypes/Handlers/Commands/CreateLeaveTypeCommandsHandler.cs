@@ -28,11 +28,8 @@ namespace HR_Management.Application.Features.LeaveTypes.Handlers.Commands
             #region Validations
             var validator = new ILeaveTypeDTOValidator();
             var ValidationResult = await validator.ValidateAsync(request.LeaveTypeDTO);
-
             if (ValidationResult.IsValid == false)
-            {
                 throw new Exception();
-            }
             #endregion
             var leaveType = _mapper.Map<LeaveType>(request.LeaveTypeDTO);
             leaveType = await _leaveTypeRepository.Add(leaveType);
