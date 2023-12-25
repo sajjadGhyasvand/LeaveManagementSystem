@@ -24,12 +24,12 @@ namespace HR_Management.Application.Features.LeaveAllocations.Handlers.Commands
         }
         public async Task<int> Handle(CreateLeaveAllocationCommand request, CancellationToken cancellationToken)
         {
-            var validator = new CreateLeaveAllocationDTOValidator(_leaveAllocationRepository);
-            /*var ValidationResult = await validator.ValidateAsync(request.UpdateLeaveAllocationDTO);
+           /* var validator = new CreateLeaveAllocationDTOValidator(_leaveAllocationRepository);
+            var ValidationResult = await validator.ValidateAsync(request.UpdateLeaveAllocationDTO);
 
             if (ValidationResult != null)
-                throw new Exception();
-            */
+                throw new HR_Management.Application.Exception.ValidationException(ValidationResult);
+*/
             var leaveAllocation = _mapper.Map<LeaveAllocation>(request.LeaveAllocationDTO);
             leaveAllocation = await _leaveAllocationRepository.Add(leaveAllocation);
             return leaveAllocation.Id;

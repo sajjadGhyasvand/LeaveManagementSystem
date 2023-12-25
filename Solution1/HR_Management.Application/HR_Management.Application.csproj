@@ -21,6 +21,7 @@
     <Folder Include="Features\NewFolder\Handlers\Queries\" />
     <Folder Include="Features\NewFolder\Request\Commands\" />
     <Folder Include="Features\NewFolder\Request\Queries\" />
+    <Folder Include="Responses\" />
   </ItemGroup>
 
 </Project>

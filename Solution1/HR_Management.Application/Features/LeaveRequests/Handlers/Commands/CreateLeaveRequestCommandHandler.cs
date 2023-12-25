@@ -27,7 +27,7 @@ namespace HR_Management.Application.Features.LeaveRequests.Handlers.Commands
             var ValidationResult = await validator.ValidateAsync(request.LeaveRequestDTO);
 
             if (ValidationResult != null)
-                throw new Exception();
+                throw new HR_Management.Application.Exception.ValidationException(ValidationResult);
             var leaveRequest = _mapper.Map<LeaveRequest>(request.LeaveRequestDTO);
             leaveRequest = await _leaveRequestRepository.Add(leaveRequest);
             return leaveRequest.Id;

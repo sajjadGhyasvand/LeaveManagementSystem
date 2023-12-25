@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HR_Management.Application.Exception;
 using HR_Management.Application.Features.LeaveTypes.Request.Commands;
 using HR_Management.Application.Persistence.Contracts;
 using HR_Management.Domain;
@@ -27,8 +28,8 @@ namespace HR_Management.Application.Features.LeaveTypes.Handlers.Commands
         {
             var leaveType = await leaveTypeRepository.Get(request.Id);
 
-            /*if (leaveType == null)
-                throw new NotFoundException(nameof(LeaveType), request.Id);*/
+            if (leaveType == null)
+                throw new NotFoundException(nameof(LeaveType), request.Id);
 
             await leaveTypeRepository.Delete(leaveType);
             return Unit.Value;

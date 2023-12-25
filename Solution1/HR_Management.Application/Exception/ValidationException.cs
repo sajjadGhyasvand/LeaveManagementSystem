@@ -10,11 +10,11 @@ namespace HR_Management.Application.Exception
     public class ValidationException : ApplicationException
     {
         public List<string> Errors { get; set; } = new List<string>();
-        public ValidationException(ValidationResult validationResult)
+        public ValidationException(FluentValidation.Results.ValidationResult validationResult)
         {
-            foreach (var err in validationResult.ErrorMessage)
+            foreach (var err in validationResult.Errors)
             {
-                Errors.Add(err.ToString());
+                Errors.Add(err.ErrorMessage);
             }
         }
     }
