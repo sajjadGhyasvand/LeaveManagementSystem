@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.Domain", "HR_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.Application", "HR_Management.Application\HR_Management.Application.csproj", "{35B26BEE-D389-466F-99DD-2256E126060D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Management.Infra_Structure", "HR_Management.Infra_Structure\HR_Management.Infra_Structure.csproj", "{402C7A49-0999-46EF-BE32-8A2DF2F38FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.Infra_Structure", "HR_Management.Infra_Structure\HR_Management.Infra_Structure.csproj", "{402C7A49-0999-46EF-BE32-8A2DF2F38FE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Management.Persistence", "HR_Management.Persistence\HR_Management.Persistence.csproj", "{2558BAD5-D737-4608-84F0-9739FCCBC09B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.Persistence", "HR_Management.Persistence\HR_Management.Persistence.csproj", "{2558BAD5-D737-4608-84F0-9739FCCBC09B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
