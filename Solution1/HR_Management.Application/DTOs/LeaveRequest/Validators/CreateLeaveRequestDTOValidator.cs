@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
+using HR_Management.Application.Contracts.Persistence;
 using HR_Management.Application.DTOs.LeaveType.Validators;
-using HR_Management.Application.Persistence.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
