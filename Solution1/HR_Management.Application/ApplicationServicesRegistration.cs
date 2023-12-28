@@ -1,4 +1,5 @@
 ﻿using HR_Management.Application.Profiles;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace HR_Management.Application
         {
            /* services.AddAutoMapper(typeof(MappingProfile));*/
            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+           services.AddMediatR(Assembly.GetExecutingAssembly());
         }
     }
 }
