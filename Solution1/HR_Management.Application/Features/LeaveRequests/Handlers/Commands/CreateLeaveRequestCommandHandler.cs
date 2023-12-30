@@ -18,7 +18,10 @@ namespace HR_Management.Application.Features.LeaveRequests.Handlers.Commands
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IEmailSender _emailSender;
         private readonly IMapper _mapper;
-
+        public CreateLeaveRequestCommandHandler()
+        {
+            
+        }
         public CreateLeaveRequestCommandHandler(ILeaveRequestRepository leaveRequestRepository, IMapper mapper, ILeaveTypeRepository leaveTypeRepository,IEmailSender emailSender)
         {
             _leaveRequestRepository = leaveRequestRepository;

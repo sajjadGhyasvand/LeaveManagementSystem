@@ -13,7 +13,6 @@ namespace HR_Management.API.Controllers
     public class LeaveTypesController : ControllerBase
     {
         private readonly IMediator _mediator;
-
         public LeaveTypesController(IMediator mediator)
         {
             _mediator = mediator;

@@ -14,7 +14,10 @@ namespace HR_Management.Application.Features.LeaveRequests.Handlers.Queries
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;
-
+        public GetLeavRequestDetailRequestHandler()
+        {
+            
+        }
         public GetLeavRequestDetailRequestHandler(ILeaveRequestRepository leaveRequestRepository, IMapper mapper)
         {
             _leaveRequestRepository = leaveRequestRepository;

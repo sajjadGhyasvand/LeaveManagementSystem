@@ -16,7 +16,10 @@ namespace HR_Management.Application.Features.LeaveRequests.Handlers.Commands
     {
         private readonly ILeaveRequestRepository leaveRequestRepository;
         private readonly IMapper mapper;
-
+        public DeleteLeaveRequestCommandHandler()
+        {
+            
+        }
         public DeleteLeaveRequestCommandHandler(ILeaveRequestRepository leaveRequestRepository,
            IMapper mapper)
         {
