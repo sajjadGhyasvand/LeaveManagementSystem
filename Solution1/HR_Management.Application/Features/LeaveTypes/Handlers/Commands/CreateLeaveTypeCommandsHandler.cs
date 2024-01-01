@@ -9,7 +9,7 @@ using HR_Management.Application.Responses;
 
 namespace HR_Management.Application.Features.LeaveTypes.Handlers.Commands
 {
-    public class CreateLeaveTypeCommandsHandler : IRequestHandler<CreateLeaveTypeCommand, int>
+    public class CreateLeaveTypeCommandsHandler : IRequestHandler<CreateLeaveTypeCommand, BaseCommandResponse>
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
 
