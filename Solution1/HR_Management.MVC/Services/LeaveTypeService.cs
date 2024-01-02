@@ -3,6 +3,7 @@ using HR_Management.MVC.Contracts;
 using HR_Management.MVC.Models;
 using HR_Management.MVC.Services.Base;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using System.Diagnostics;
 
 namespace HR_Management.MVC.Services
 {
@@ -11,7 +12,7 @@ namespace HR_Management.MVC.Services
         private readonly ILocalStorageService _localTypeSerivice;
         private readonly IClient _httpClient;
         private readonly IMapper _mapper;
-        public LeaveTypeService(IClient httpClient, ILocalStorageService localTypeSerivice, IMapper mapper) : base(httpClient, localTypeSerivice)
+        public LeaveTypeService(IClient httpClient, ILocalStorageService localTypeSerivice, IMapper mapper) : base(localTypeSerivice , httpClient)
         {
             _httpClient = httpClient;
             _localTypeSerivice = localTypeSerivice;
@@ -29,6 +30,8 @@ namespace HR_Management.MVC.Services
                 {
                     respons.Data = apiResponse.Id;
                     respons.Success = true;
+                    return new Response<int> { Success = respons.Success };
+
                 }
                 else
                 {
@@ -36,6 +39,7 @@ namespace HR_Management.MVC.Services
                     {
                         respons.ValidationErrors += item + Environment.NewLine;
                     }
+                    return new Response<int> { Success = false };
                 }
             }
             catch (ApiException ex)
@@ -45,24 +49,43 @@ namespace HR_Management.MVC.Services
             }
         }
 
-        public Task DeleteLeaveType(LeaveTypeVM leaveeType)
+        public async Task<Response<int>> DeleteLeaveType(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _client.LeaveTypesDELETEAsync(id);
+                return new Response<int> { Success = true };
+            }
+            catch (ApiException ex)
+            { 
+                return ConvertApiExcepion<int>(ex);
+            }
         }
 
-        public Task<LeaveTypeVM> GetLeaveTypeDetails(int id)
+        public async Task<LeaveTypeVM> GetLeaveTypeDetails(int id)
         {
-            throw new NotImplementedException();
+            var leaveType = await _client.LeaveTypesGETAsync(id);
+            return  _mapper.Map<LeaveTypeVM>(leaveType);
         }
 
-        public Task<List<LeaveTypeVM>> GetLeaveTypes()
+        public async Task<List<LeaveTypeVM>> GetLeaveTypes()
         {
-            throw new NotImplementedException();
+            var leaveTypes = await _client.LeaveTypesAllAsync();
+            return _mapper.Map<List<LeaveTypeVM>>(leaveTypes);
         }
 
-        public Task UpdateLeaveType(LeaveTypeVM leaveeType)
+        public async Task<Response<int>> UpdateLeaveType(int id,LeaveTypeVM leaveType)
         {
-            throw new NotImplementedException();
+            try
+            {
+                LeaveTypeDTO leaveTypeDTO = _mapper.Map<LeaveTypeDTO>(leaveType);
+                await _client.LeaveTypesPUTAsync(id, leaveTypeDTO);
+                return new Response<int> { Success = true };
+            }
+            catch (ApiException ex)
+            {
+                return ConvertApiExcepion<int>(ex);
+            }
         }
     }
 }
