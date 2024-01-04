@@ -18,7 +18,7 @@ namespace HR_Management.MVC.Services
             _localTypeSerivice = localTypeSerivice;
             _mapper = mapper;
         }
-        public async Task<Response<int>> CreateLeaveType(LeaveTypeVM leaveType)
+        public async Task<Response<int>> CreateLeaveType(CreateLeaveTypeVM leaveType)
         {
             try
             {

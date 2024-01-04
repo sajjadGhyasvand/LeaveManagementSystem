@@ -1,4 +1,5 @@
 ﻿using HR_Management.MVC.Contracts;
+using HR_Management.MVC.Services.Base;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HR_Management.MVC.Controllers
@@ -17,7 +18,6 @@ namespace HR_Management.MVC.Controllers
             var leaveTypes = await _leaveTypeService.GetLeaveTypes();
             return View(leaveTypes);
         }
-
         // GET: LeaveTypesController/Details/5
         public ActionResult Details(int id)
         {
@@ -25,9 +25,22 @@ namespace HR_Management.MVC.Controllers
         }
 
         // GET: LeaveTypesController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create(CreateLeaveTypeVM createType)
         {
-            return View();
+            try
+            {
+                var response = await _leaveTypeService.CreateLeaveType(createType);
+                if (response.Success)
+                {
+                    return RedirectToAction("Index");
+                }
+                ModelState.AddModelError("", response.ValidationErrors);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+            return View(createType);
         }
 
         // POST: LeaveTypesController/Create
