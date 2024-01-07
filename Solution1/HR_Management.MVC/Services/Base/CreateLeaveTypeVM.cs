@@ -9,6 +9,6 @@ namespace HR_Management.MVC.Services.Base
         public string Name { get; set; }
         [Required]
         [Display(Name="Default number of days")]
-        public int DafaultDay { get; set; }
+        public int DefaultDay { get; set; }
     }
 }
