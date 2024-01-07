@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.API", "HR_Man
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.UnitTest", "HR_Management.UnitTest\HR_Management.UnitTest.csproj", "{5AD7AB94-8C11-4035-AD2F-D7E061C52E9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Management.MVC", "HR_Management.MVC\HR_Management.MVC.csproj", "{4E148D36-B569-4A4A-8E0F-E60B3196E649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Management.MVC", "HR_Management.MVC\HR_Management.MVC.csproj", "{4E148D36-B569-4A4A-8E0F-E60B3196E649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR_Management.Identity", "HR_Management.Identity\HR_Management.Identity.csproj", "{99E4C345-52EB-46DB-B470-69AD54BCECC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{4E148D36-B569-4A4A-8E0F-E60B3196E649}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E148D36-B569-4A4A-8E0F-E60B3196E649}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E148D36-B569-4A4A-8E0F-E60B3196E649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E4C345-52EB-46DB-B470-69AD54BCECC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E4C345-52EB-46DB-B470-69AD54BCECC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E4C345-52EB-46DB-B470-69AD54BCECC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E4C345-52EB-46DB-B470-69AD54BCECC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{9916A557-9AEF-4ECF-A68E-522C0E6D6E1C} = {4A6D4217-DB99-4844-87AA-B7E1AA37CF20}
 		{5AD7AB94-8C11-4035-AD2F-D7E061C52E9A} = {FE5ADDD9-14BF-420C-9237-EE86BB9D885D}
 		{4E148D36-B569-4A4A-8E0F-E60B3196E649} = {905AF21B-7498-482D-B123-A89C7D056DCD}
+		{99E4C345-52EB-46DB-B470-69AD54BCECC3} = {708F8799-AB10-43B4-956C-762DD9AC752F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBD62BD5-EE50-4629-91AF-58AC06137CB6}
