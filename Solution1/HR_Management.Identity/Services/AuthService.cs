@@ -30,9 +30,27 @@ namespace HR_Management.Identity.Services
 
 
         #region Login
-        public Task<AuthResponse> login(AuthRequest request)
+        public async Task<AuthResponse> login(AuthRequest request)
         {
-            throw new NotImplementedException();
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            if (user == null)
+            {
+                throw new Exception($"user with {request.Email} not found.");
+            }
+            var result = await _signInManager.PasswordSignInAsync(user.UserName,request.Password,false,lockoutOnFailure:false);
+            if (!result.Succeeded)
+            {
+                throw new Exception($"user with {request.Email} not found.");
+            }
+            JwtSecurityToken jwtSecurityToken = await GenerateToken(user);
+            AuthResponse response = new AuthResponse()
+            {
+                Id = user.Id,
+                Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
+                Email = user.Email,
+                UserName = user.UserName,
+            };
+            return response;
         }
 
         private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
