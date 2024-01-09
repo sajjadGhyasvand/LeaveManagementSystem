@@ -10,6 +10,6 @@ namespace HR_Management.Application.Contracts.Identity
     public interface IAuthService
     {
         Task<AuthResponse> login(AuthRequest request);
-        Task<RegistrationRequest> register(RegistrationRequest request);
+        Task<RegistrationResponse> register(RegistrationRequest request);
     }
 }
