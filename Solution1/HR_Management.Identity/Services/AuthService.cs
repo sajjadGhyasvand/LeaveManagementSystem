@@ -91,7 +91,7 @@ namespace HR_Management.Identity.Services
             var existingUser = await _userManager.FindByNameAsync(request.UserName);
             if (existingUser != null)
             {
-                throw new Exception($"username '{request.Email}' already exists.");
+                throw new Exception($"username '{request.UserName}' already exists.");
             }
             var user = new ApplicationUser
             {
